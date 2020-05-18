@@ -22,8 +22,9 @@ def create_app(test_config=None):
 
     @app.route('/')
     def be_cool():
+        access_token = requests.get().json()['access_token']
         token = get_token_auth_header()
-        return token
+        return requests.get().json()['access_token']
 
     @app.route('/movies', methods=['GET'])
     @requires_auth('get:movies')
