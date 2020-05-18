@@ -26,7 +26,7 @@ def create_app(test_config=None):
 
     @app.route('/movies', methods=['GET'])
     @requires_auth('get:movies')
-    def get_movies():
+    def get_movies(token):
         movies = list(map(Movies.format, Movies.query.all()))
         if len(movies) == 0:
             abort(404)
@@ -38,7 +38,7 @@ def create_app(test_config=None):
 
     @app.route('/actors', methods=['GET'])
     @requires_auth('get:actors')
-    def get_actors():
+    def get_actors(token):
         actors = list(map(Actors.format, Actors.query.all()))
         if len(actors) == 0:
             abort(404)
@@ -50,7 +50,7 @@ def create_app(test_config=None):
 
     @app.route('/movies/<int:movie_id>', methods=['DELETE'])
     @requires_auth('delete:movies')
-    def delete_movie(movie_id):
+    def delete_movie(token, movie_id):
         movie = Movies.query.get(movie_id)
         if movie is None:
             abort(404)
@@ -66,7 +66,7 @@ def create_app(test_config=None):
 
     @app.route('/actors/<int:actor_id>', methods=['DELETE'])
     @requires_auth('delete:actors')
-    def delete_actor(actor_id):
+    def delete_actor(token, actor_id):
         actor = Actors.query.get(actor_id)
         if actor is None:
             abort(404)
@@ -82,7 +82,7 @@ def create_app(test_config=None):
 
     @app.route('/movies', methods=['POST'])
     @requires_auth('post:movies')
-    def add_movie():
+    def add_movie(token):
         body = request.get_json()
         if body:
             new_title = body.get('title', None)
@@ -108,7 +108,7 @@ def create_app(test_config=None):
 
     @app.route('/actors', methods=['POST'])
     @requires_auth('post:actors')
-    def add_actor():
+    def add_actor(token):
         body = request.get_json()
         if body:
             new_name = body.get('name', None)
@@ -135,7 +135,7 @@ def create_app(test_config=None):
 
     @app.route('/movies/<int:movie_id>', methods=['PATCH'])
     @requires_auth('patch:movies')
-    def update_movie(movie_id):
+    def update_movie(token, movie_id):
         movie = Movies.query.get(movie_id)
 
         if movie is None:
@@ -166,7 +166,7 @@ def create_app(test_config=None):
 
     @app.route('/actors/<int:actor_id>', methods=['PATCH'])
     @requires_auth('patch:actors')
-    def update_actor(actor_id):
+    def update_actor(token, actor_id):
         actor = Actors.query.get(actor_id)
         if actor is None:
             abort(404)
