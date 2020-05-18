@@ -3,7 +3,7 @@ from flask import Flask, request, abort, jsonify
 from flask_sqlalchemy import SQLAlchemy
 from flask_cors import CORS
 from models import setup_db, Movies, Actors
-from auth import AuthError, requires_auth
+from auth import AuthError, requires_auth, get_token_auth_header
 
 
 def create_app(test_config=None):
@@ -20,9 +20,10 @@ def create_app(test_config=None):
                              'GET,POST,PATCH,DELETE')
         return response
 
-    @app.route('/coolkids')
+    @app.route('/')
     def be_cool():
-        return "Be cool, man, be coooool! You're almost a FSND grad!"
+        token = get_token_auth_header()
+        return token
 
     @app.route('/movies', methods=['GET'])
     @requires_auth('get:movies')
