@@ -21,10 +21,8 @@ def create_app(test_config=None):
         return response
 
     @app.route('/')
-    def be_cool():
-        access_token = requests.get().json()['access_token']
-        token = get_token_auth_header()
-        return requests.get().json()['access_token']
+    def index():
+        return 'Hello, Welcome Capstone project'
 
     @app.route('/movies', methods=['GET'])
     @requires_auth('get:movies')
