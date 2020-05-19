@@ -44,7 +44,9 @@ source setup.sh
 export FLASK_APP=app.py
 export FLASK_ENV=development
 flask run
-or just: 
+```
+or just:
+```bash 
 python app.py
 ```
 
