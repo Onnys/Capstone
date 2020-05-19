@@ -118,7 +118,11 @@ DELETE '/actors/<int:actor_id>'
 - Request Arguments: id of the actor eg:'/actors/1'
 - Returns: A success value and the id of the deleted actror 
 
-
+## API Testing
+To run the tests, run
+```bash
+python test_app.py
+```
 ## Authors
 Onnys Anild Lopes Menete
 
