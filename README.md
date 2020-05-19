@@ -57,6 +57,8 @@ flask run
    - All permissions a Casting Director has and…
    - Add or delete a movie from the database
 
+## Deployment
+The API is deployed on Heroku [project link](https://castingagencyfsnd.herokuapp.com/).
 
 ## Endpoints
 - GET '/movies'
