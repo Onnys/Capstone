@@ -219,13 +219,13 @@ def create_app(test_config=None):
             'message': 'bad request'
         }), 400
 
-    @app.errorhandler(405)
+    @app.errorhandler(401)
     def method_not_allowed(error):
         return jsonify({
             'success': False,
-            'error': 405,
+            'error': 401,
             'message': 'method not allowed'
-        }), 405
+        }), 401
 
     @app.errorhandler(AuthError)
     def auth_error(e):
