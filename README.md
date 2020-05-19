@@ -94,6 +94,65 @@ GET '/movies'
 - Request Arguments: None
 - Authentication: the roles that can acess are Casting Assistant, Casting Director and Executive Producer
 - Returns: A JSON with list of movies objects, success value.
+```bash
+curl --location --request GET 'https://castingagencyfsnd.herokuapp.com/movies' \
+--header 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InNwVTk1eGZkR0hXWkZ2RDVvRzU0TSJ9.eyJpc3MiOiJodHRwczovL3Byb2plY3Rmc25kLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw1ZWMyZGQ0NmQwNDdjOTBjYzU3MjZiNGIiLCJhdWQiOiJjYXN0aW5nIiwiaWF0IjoxNTg5OTE2NTgzLCJleHAiOjE1OTAwMDI5ODIsImF6cCI6IkYwOWQ3Nm1IVlhFczZnME05VG12cUZEN1VBNXV2QjJFIiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJnZXQ6YWN0b3JzIiwiZ2V0Om1vdmllcyJdfQ.gkuByEJFJPO8_8DoRukebvaislj1fpf0--nbmGz6SIQkilOh5UzjSsCoTMUz1w2C6jVOgVZrIqraHQyvWyVorhmiG5EKLpBsm2R3UEzlDs84hjoyYT0-AFAqb2Q2uXpqjPUpsl2-DljPxSeeQkG6Jntn8kTfAwwhqWtBNXeV9-sF4-32nu5zXtsh8CQepDWVv-CBlQ3Cv8A8yBrAd1JX3TiZS3AX5_iHg5XPaZQ2gX5sRBQMLtLsFMWVTkxBUvjQfDNjmzDYfFGzfmQB1xKNJ0wVMwhJyoFXy84XgqZVr5rv4AfPcFw8Jh5bzBh3YmVODVIyyJJYlJFeRnWJN5vayw'
+```
+{
+    "movies": [
+        {
+            "id": 2,
+            "release date": "Thu, 21 Dec 2023 12:00:00 GMT",
+            "title": "The Last Man Standing"
+        },
+        {
+            "id": 3,
+            "release date": "Thu, 21 Dec 2023 12:00:00 GMT",
+            "title": "The Last Man Standing"
+        },
+        {
+            "id": 4,
+            "release date": "Thu, 21 Dec 2023 12:00:00 GMT",
+            "title": "The Last Man Standing"
+        },
+        {
+            "id": 5,
+            "release date": "Thu, 21 Dec 2023 12:00:00 GMT",
+            "title": "The Last Man Standing"
+        },
+        {
+            "id": 6,
+            "release date": "Thu, 21 Dec 2023 12:00:00 GMT",
+            "title": "The Last Man Standing"
+        },
+        {
+            "id": 7,
+            "release date": "Thu, 21 Dec 2023 12:00:00 GMT",
+            "title": "The Last Man Standing"
+        },
+        {
+            "id": 8,
+            "release date": "Thu, 21 Dec 2023 12:00:00 GMT",
+            "title": "The Last Man Standing"
+        },
+        {
+            "id": 9,
+            "release date": "Thu, 21 Dec 2023 12:00:00 GMT",
+            "title": "My ex wife"
+        },
+        {
+            "id": 11,
+            "release date": "Thu, 21 Dec 2023 12:00:00 GMT",
+            "title": "The Last Man Standing"
+        },
+        {
+            "id": 12,
+            "release date": "Thu, 21 Dec 2023 12:00:00 GMT",
+            "title": "The last ship"
+        }
+    ],
+    "success": true
+}
 
 GET '/actors'
 - Fetches a dictionary of actors 
