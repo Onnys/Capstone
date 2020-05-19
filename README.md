@@ -98,6 +98,7 @@ GET '/movies'
 curl --location --request GET 'https://castingagencyfsnd.herokuapp.com/movies' \
 --header 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InNwVTk1eGZkR0hXWkZ2RDVvRzU0TSJ9.eyJpc3MiOiJodHRwczovL3Byb2plY3Rmc25kLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw1ZWMyZGQ0NmQwNDdjOTBjYzU3MjZiNGIiLCJhdWQiOiJjYXN0aW5nIiwiaWF0IjoxNTg5OTE2NTgzLCJleHAiOjE1OTAwMDI5ODIsImF6cCI6IkYwOWQ3Nm1IVlhFczZnME05VG12cUZEN1VBNXV2QjJFIiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJnZXQ6YWN0b3JzIiwiZ2V0Om1vdmllcyJdfQ.gkuByEJFJPO8_8DoRukebvaislj1fpf0--nbmGz6SIQkilOh5UzjSsCoTMUz1w2C6jVOgVZrIqraHQyvWyVorhmiG5EKLpBsm2R3UEzlDs84hjoyYT0-AFAqb2Q2uXpqjPUpsl2-DljPxSeeQkG6Jntn8kTfAwwhqWtBNXeV9-sF4-32nu5zXtsh8CQepDWVv-CBlQ3Cv8A8yBrAd1JX3TiZS3AX5_iHg5XPaZQ2gX5sRBQMLtLsFMWVTkxBUvjQfDNjmzDYfFGzfmQB1xKNJ0wVMwhJyoFXy84XgqZVr5rv4AfPcFw8Jh5bzBh3YmVODVIyyJJYlJFeRnWJN5vayw'
 ```
+```bash
 {
     "movies": [
         {
@@ -153,6 +154,7 @@ curl --location --request GET 'https://castingagencyfsnd.herokuapp.com/movies' \
     ],
     "success": true
 }
+```
 
 GET '/actors'
 - Fetches a dictionary of actors 
