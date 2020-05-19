@@ -118,34 +118,6 @@ DELETE '/actors/<int:actor_id>'
 - Request Arguments: id of the actor eg:'/actors/1'
 - Returns: A success value and the id of the deleted actror 
 
-## Deploying to Heroku
-Create Heroku app
-In order to create the Heroku app run heroku create name_of_your_app. The output will include a git url for your Heroku application. Copy this as, we'll use it in a moment.
-
-Now if you check your Heroku Dashboard in the browser, you'll see an application by that name. But it doesn't have our code or anything yet - it's completely empty. Let's get our code up there.
-
-Add git remote for Heroku to local repository
-Using the git url obtained from the last step, in terminal run: git remote add heroku heroku_git_url.
-
-Add postgresql add on for our database
-Heroku has an addon for apps for a postgresql database instance. Run this code in order to create your database and connect it to your application: heroku addons:create heroku-postgresql:hobby-dev --app name_of_your_application
-
-Breaking down the heroku-postgresql:hobby-dev section of this command, heroku-postgresql is the name of the addon. hobby-dev on the other hand specifies the tier of the addon, in this case the free version which has a limit on the amount of data it will store, albeit fairly high.
-
-Run heroku config --app name_of_your_application in order to check your configuration variables in Heroku. You will see DATABASE_URL and the URL of the database you just created. That's excellent, but there were a lot more environment variables our apps use.
-
-Go fix our configurations in Heroku
-In the browser, go to your Heroku Dashboard and access your application's settings. Reveal your config variables and start adding all the required environment variables for your project. For the purposes of the sample project, just add one additional one - ‘EXCITED’ and set it to true or false in all lowercase.
-
-Push it!
-Push it up! git push heroku master
-
-Run migrations
-Once your app is deployed, run migrations by running: heroku run python manage.py db upgrade --app name_of_your_application
-
-That's it!
-And now you have a live application! Open the application from your Heroku Dashboard and see it work live! Make additional requests using curl or Postman as you build your application and make more complex endpoints.
-
 
 ## Authors
 Onnys Anild Lopes Menete
