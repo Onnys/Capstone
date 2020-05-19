@@ -170,11 +170,23 @@ curl --location --request POST 'https://castingagencyfsnd.herokuapp.com/movies' 
 ```
 POST '/actors'
 - Post actor and persist it to the database
-- Request Arguments: A JSON with name, age and gender  ```eg:{"name":"Onnys Anild Lopes Menete","age": 21,
+- Request Arguments: A JSON with name, age and gender  ```eg:{"name":"Lazaro Neto","age": 21,
 "gender":"M"}```
 - Authentication: Casting Director and  Executive Producer 
 - Returns : A JSON with success value and the id of the posted actor
-
+```bash
+curl --location --request POST 'https://castingagencyfsnd.herokuapp.com/actors' \
+--header 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InNwVTk1eGZkR0hXWkZ2RDVvRzU0TSJ9.eyJpc3MiOiJodHRwczovL3Byb2plY3Rmc25kLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw1ZWMyZGUxYzZhMzA1NDBjZDk4NGRiNmIiLCJhdWQiOiJjYXN0aW5nIiwiaWF0IjoxNTg5OTE5NzIwLCJleHAiOjE1OTAwMDYxMTksImF6cCI6IkYwOWQ3Nm1IVlhFczZnME05VG12cUZEN1VBNXV2QjJFIiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJkZWxldGU6YWN0b3JzIiwiZ2V0OmFjdG9ycyIsImdldDptb3ZpZXMiLCJwYXRjaDphY3RvcnMiLCJwYXRjaDptb3ZpZXMiLCJwb3N0OmFjdG9ycyJdfQ.IopxGPMinZW1r_cjsmGIoTNxKXjUUwHpyU5VdOwRhsVYShULI7LufJfIB1AwdXPdZZsmKQG1-sHbLIRf3Tx3BngI90wiYX6lF34hbi75IXAd7VwKnbqpe-nfY08YNtxwpflNnblLSw3EKhdB-Lngjzx04NwO8LfK8bLJIP8GaHj2NJW8z8umuif9CJgdzSFgUpCKZq2bXnMM36dQpyBdr6Jast7lBED_7cMRRslli8vZCc3W4cplDtqVZIWDQOcrW73ZDppJplIOa__Ju_diOFhvcMqb3xGzNdB0PqUAd7WGYwnr01LvLHqPGGXiz_NPZ9YaU5gqm4puceSSDf3IDg' \
+--header 'Content-Type: application/json' \
+--data-raw '{"name":"Lazaro Neto","age": 21,
+"gender":"Male"}'
+```
+```
+{
+    "actor id": 13,
+    "success": true
+}
+```
 PATCH '/movies/<int:movie_id>'
 - Updates a movie data based on the id 
 - Request Arguments: A JSON with title and a release_date ```eg: { "title":"The Movie", "release_date": "12-21-25 12:00 pm"}```
