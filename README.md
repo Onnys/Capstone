@@ -58,15 +58,15 @@ flask run
     Add or delete a movie from the database
 
 
-Endpoints
-GET '/movies'
-GET '/actors'
-POST '/movies'
-POST '/actors'
-PATCH '/movies/<int:movie_id>'
-PATCH '/actors/<int:actor_id>'
-DELETE '/movies/<int:movie_id>'
-DELETE '/actors/<int:actor_id>'
+## Endpoints
+-GET '/movies'
+-GET '/actors'
+-POST '/movies'
+-POST '/actors'
+-PATCH '/movies/<int:movie_id>'
+-PATCH '/actors/<int:actor_id>'
+-DELETE '/movies/<int:movie_id>'
+-DELETE '/actors/<int:actor_id>'
 
 
 GET '/movies'
