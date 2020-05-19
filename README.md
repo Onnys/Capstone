@@ -17,9 +17,9 @@ Once you have your virtual environment setup and running, install dependencies b
 ```bash
 pip install -r requirements.txt
 ```
-## Password Ax2$g55mEBZCT$H
-This will install all of the required packages we selected within the `requirements.txt` file.
 
+This will install all of the required packages we selected within the `requirements.txt` file.
+## Password Ax2$g55mEBZCT$H
 ##### Key Dependencies
 
 - [Flask](http://flask.pocoo.org/)  is a lightweight backend microservices framework. Flask is required to handle requests and responses.
@@ -45,28 +45,28 @@ flask run
 ```
 
 ## Roles and Permissions:
--Casting Assistant
-    Can view actors and movies
+- Casting Assistant
+    - Can view actors and movies
 
--Casting Director
-    All permissions a Casting Assistant has and…
-    Add or delete an actor from the database
-    Modify actors or movies
+- Casting Director
+    - All permissions a Casting Assistant has and…
+    - Add or delete an actor from the database
+    - Modify actors or movies
 
--Executive Producer
-    All permissions a Casting Director has and…
-    Add or delete a movie from the database
+- Executive Producer
+   - All permissions a Casting Director has and…
+   - Add or delete a movie from the database
 
 
 ## Endpoints
--GET '/movies'
--GET '/actors'
--POST '/movies'
--POST '/actors'
--PATCH '/movies/<int:movie_id>'
--PATCH '/actors/<int:actor_id>'
--DELETE '/movies/<int:movie_id>'
--DELETE '/actors/<int:actor_id>'
+- GET '/movies'
+- GET '/actors'
+- POST '/movies'
+- POST '/actors'
+- PATCH '/movies/<int:movie_id>'
+- PATCH '/actors/<int:actor_id>'
+- DELETE '/movies/<int:movie_id>'
+- DELETE '/actors/<int:actor_id>'
 
 
 GET '/movies'
