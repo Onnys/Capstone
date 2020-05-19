@@ -9,11 +9,9 @@ database_path = "postgres://{}:{}@{}/{}".format('onnys',
 
 db = SQLAlchemy()
 
-# 'postgres://omamivpltqlmoo:e2126e5ae48ca3f69ad946e663860dde10d0f1a2b235929984b87e22b3537489@ec2-52-202-146-43.compute-1.amazonaws.com:5432/de6rsdag5asg0l'
-
 
 def setup_db(app, database_path=database_path):
-    app.config["SQLALCHEMY_DATABASE_URI"] = database_path
+    app.config["SQLALCHEMY_DATABASE_URI"] = 'postgres://omamivpltqlmoo:e2126e5ae48ca3f69ad946e663860dde10d0f1a2b235929984b87e22b3537489@ec2-52-202-146-43.compute-1.amazonaws.com:5432/de6rsdag5asg0l'
     app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
     db.app = app
     db.init_app(app)

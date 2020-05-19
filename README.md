@@ -73,7 +73,7 @@ python app.py
         - 'post:movies'
         - 'delete:movie'
 
-- Note: Insed ```setup.sh``` file we have a token for each role
+- Note: Inssed ```setup.sh``` file we have a token for each role, you can copy and Decoded at [jwt](https://jwt.io/) to see permission for each token. 
 
 ## Deployment
 The API is deployed on Heroku [project link](https://castingagencyfsnd.herokuapp.com/).
