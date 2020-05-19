@@ -147,8 +147,8 @@ That's it!
 And now you have a live application! Open the application from your Heroku Dashboard and see it work live! Make additional requests using curl or Postman as you build your application and make more complex endpoints.
 
 
-Authors
+## Authors
 Onnys Anild Lopes Menete
 
-Acknowledgements
+## Acknowledgements
 I would like to thank Udacity for the well organized content of this course and mentor help, the peer chat and alumni for all help, and to my friend Doilio Matsinhe who sugested me udacity. 
