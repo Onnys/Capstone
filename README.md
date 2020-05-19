@@ -264,6 +264,7 @@ Note: the above command runs on postgres, if have not installed yet [link](https
 
 To run the tests, run
 ```bash
+source setup.sh 
 python test_app.py
 ``` 
 ## Error Handler
