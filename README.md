@@ -102,36 +102,6 @@ curl --location --request GET 'https://castingagencyfsnd.herokuapp.com/movies' \
 {
     "movies": [
         {
-            "id": 2,
-            "release date": "Thu, 21 Dec 2023 12:00:00 GMT",
-            "title": "The Last Man Standing"
-        },
-        {
-            "id": 3,
-            "release date": "Thu, 21 Dec 2023 12:00:00 GMT",
-            "title": "The Last Man Standing"
-        },
-        {
-            "id": 4,
-            "release date": "Thu, 21 Dec 2023 12:00:00 GMT",
-            "title": "The Last Man Standing"
-        },
-        {
-            "id": 5,
-            "release date": "Thu, 21 Dec 2023 12:00:00 GMT",
-            "title": "The Last Man Standing"
-        },
-        {
-            "id": 6,
-            "release date": "Thu, 21 Dec 2023 12:00:00 GMT",
-            "title": "The Last Man Standing"
-        },
-        {
-            "id": 7,
-            "release date": "Thu, 21 Dec 2023 12:00:00 GMT",
-            "title": "The Last Man Standing"
-        },
-        {
             "id": 8,
             "release date": "Thu, 21 Dec 2023 12:00:00 GMT",
             "title": "The Last Man Standing"
@@ -140,11 +110,6 @@ curl --location --request GET 'https://castingagencyfsnd.herokuapp.com/movies' \
             "id": 9,
             "release date": "Thu, 21 Dec 2023 12:00:00 GMT",
             "title": "My ex wife"
-        },
-        {
-            "id": 11,
-            "release date": "Thu, 21 Dec 2023 12:00:00 GMT",
-            "title": "The Last Man Standing"
         },
         {
             "id": 12,
