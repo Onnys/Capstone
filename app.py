@@ -44,7 +44,7 @@ def create_app(test_config=None):
             abort(404)
 
         return jsonify({
-            'succcess': True,
+            'success': True,
             'actors': actors
         })
 
