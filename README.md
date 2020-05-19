@@ -19,7 +19,7 @@ pip install -r requirements.txt
 ```
 
 This will install all of the required packages we selected within the `requirements.txt` file.
-## Password Ax2$g55mEBZCT$H
+
 ##### Key Dependencies
 
 - [Flask](http://flask.pocoo.org/)  is a lightweight backend microservices framework. Flask is required to handle requests and responses.
@@ -47,15 +47,24 @@ flask run
 ## Roles and Permissions:
 - Casting Assistant
     - Can view actors and movies
-
+        - 'get:movies'
+        - 'get:actors'    
+ 
 - Casting Director
     - All permissions a Casting Assistant has and…
     - Add or delete an actor from the database
+        - 'post:actors'
+        - 'delete: actors'
     - Modify actors or movies
+        - 'patch:actors'
+        - 'patch:movies'
+
 
 - Executive Producer
    - All permissions a Casting Director has and…
    - Add or delete a movie from the database
+        - 'post:movies'
+        - 'delete:movie'
 
 ## Deployment
 The API is deployed on Heroku [project link](https://castingagencyfsnd.herokuapp.com/).
@@ -75,50 +84,50 @@ GET '/movies'
 - Fetches a dictionary of movies 
 - Request Arguments: None
 - Authentication: the roles that can acess are Casting Assistant, Casting Director and Executive Producer
-- Returns: A list of movies objects, success value.
+- Returns: A JSON with list of movies objects, success value.
 
 GET '/actors'
 - Fetches a dictionary of actors 
 - Request Arguments: None
 - Authentication: the roles that can acess are Casting Assistant, Casting Director and Executive Producer
-- Returns: A list of actors objects, success value.
+- Returns: A JSON with list of actors objects, success value.
 
 
 POST '/movies'
 - Post a movie and persist it to the database
 - Request Arguments: A JSON with title, release_date  eg:{ "title":"X-Man", "release_date": "12-21-23 12:00 pm"}
 - Authentication: Only the executive Executive Producer
-- Returns : A success value and the id of the posted movie
+- Returns : A JSON with success value and the id of the posted movie
 
 POST '/actors'
 - Post actor and persist it to the database
 - Request Arguments: A JSON with name, age and gender  eg:{"name":"Onnys Anild Lopes Menete","age": 21,
 "gender":"M"}
 - Authentication: Casting Director and  Executive Producer 
-- Returns : A success value and the id of the posted actor
+- Returns : A JSON with success value and the id of the posted actor
 
 PATCH '/movies/<int:movie_id>'
 - Updates a movie data based on the id 
 - Request Arguments: A JSON with title and a release_date eg: { "title":"The Movie", "release_date": "12-21-25 12:00 pm"}
 - Authentication: Casting Director and  Executive Producer 
-- Returns : A success value and the id of the updated movie
+- Returns : A JSON with success value and the id of the updated movie
 
 PATCH '/actors/<int:actor_id>'
 - Updates an actor data based on the id 
 - Request Arguments: A JSON with name, age and gender eg:{"name":"Alex Jordan","age": 21,
 "gender":"Female"}
 - Authentication: Casting Director and  Executive Producer 
-- Returns : A success value and the id of the updated actor
+- Returns : A JSON with success value and the id of the updated actor
 
 DELETE '/movies/<int:movie_id>'
 - Remove persistentle a movie from the database based on id 
 - Request Arguments: id of the movie eg:'/movies/1'
-- Returns: A success value and the id of the deleted movie
+- Returns: A JSON with success value and the id of the deleted movie
 
 DELETE '/actors/<int:actor_id>'
 - Remove persistentle an actor from the database based on id 
 - Request Arguments: id of the actor eg:'/actors/1'
-- Returns: A success value and the id of the deleted actror 
+- Returns: A JSON with success value and the id of the deleted actror 
 
 ## API Testing
 To run the tests, run
