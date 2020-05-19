@@ -266,6 +266,21 @@ To run the tests, run
 ```bash
 python test_app.py
 ``` 
+## Error Handler
+They have this format
+```bash
+{
+    'success': False,
+    'error': 404,
+    'message': 'Resource not found'
+}
+```
+```
+    - 400 'bad request'
+    - 401 'method not allowed'
+    - 404 'Resource not found'
+    - 422 'unprocessable'
+```
 ## Authors
 Onnys Anild Lopes Menete
 
