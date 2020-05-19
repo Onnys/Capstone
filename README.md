@@ -46,7 +46,8 @@ export FLASK_ENV=development
 flask run
 ```
 or just:
-```bash 
+```bash
+source setup.sh 
 python app.py
 ```
 
@@ -71,6 +72,8 @@ python app.py
    - Add or delete a movie from the database
         - 'post:movies'
         - 'delete:movie'
+
+- Note: Insed ```setup.sh``` file we have a token for each role
 
 ## Deployment
 The API is deployed on Heroku [project link](https://castingagencyfsnd.herokuapp.com/).
