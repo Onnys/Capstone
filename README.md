@@ -1,6 +1,7 @@
 # Casting Agency
-The Casting Agency models a company that is responsible for creating movies and managing and assigning actors to those movies. I am an Executive Producer within the company and am creating a system to simplify and streamline your process.
+The Casting Agency models a company that is responsible for creating movies and managing and assigning actors to those movies. I am an Executive Producer within the company and am creating a system to simplify and streamline my process.
 
+frontend comming soon....
 ## Getting Started
 
 ### Installing Dependencies
@@ -39,9 +40,12 @@ From within the  directory first ensure you are working using your created virtu
 To run the server, execute:
 
 ```bash
+source setup.sh
 export FLASK_APP=app.py
 export FLASK_ENV=development
 flask run
+or just: 
+python app.py
 ```
 
 ## Roles and Permissions:
@@ -95,27 +99,27 @@ GET '/actors'
 
 POST '/movies'
 - Post a movie and persist it to the database
-- Request Arguments: A JSON with title, release_date  eg:{ "title":"X-Man", "release_date": "12-21-23 12:00 pm"}
+- Request Arguments: A JSON with title, release_date  ```eg:{ "title":"X-Man", "release_date": "12-21-23 12:00 pm"}```
 - Authentication: Only the executive Executive Producer
 - Returns : A JSON with success value and the id of the posted movie
 
 POST '/actors'
 - Post actor and persist it to the database
-- Request Arguments: A JSON with name, age and gender  eg:{"name":"Onnys Anild Lopes Menete","age": 21,
-"gender":"M"}
+- Request Arguments: A JSON with name, age and gender  ```eg:{"name":"Onnys Anild Lopes Menete","age": 21,
+"gender":"M"}```
 - Authentication: Casting Director and  Executive Producer 
 - Returns : A JSON with success value and the id of the posted actor
 
 PATCH '/movies/<int:movie_id>'
 - Updates a movie data based on the id 
-- Request Arguments: A JSON with title and a release_date eg: { "title":"The Movie", "release_date": "12-21-25 12:00 pm"}
+- Request Arguments: A JSON with title and a release_date ```eg: { "title":"The Movie", "release_date": "12-21-25 12:00 pm"}```
 - Authentication: Casting Director and  Executive Producer 
 - Returns : A JSON with success value and the id of the updated movie
 
 PATCH '/actors/<int:actor_id>'
 - Updates an actor data based on the id 
-- Request Arguments: A JSON with name, age and gender eg:{"name":"Alex Jordan","age": 21,
-"gender":"Female"}
+- Request Arguments: A JSON with name, age and gender ```eg:{"name":"Alex Jordan","age": 21,
+ "gender":"Female"}```
 - Authentication: Casting Director and  Executive Producer 
 - Returns : A JSON with success value and the id of the updated actor
 
@@ -130,10 +134,16 @@ DELETE '/actors/<int:actor_id>'
 - Returns: A JSON with success value and the id of the deleted actror 
 
 ## API Testing
+To create the database for test, run
+```bash
+dropdb agency_test && createdb agency_test
+```
+Note: the above command runs on postgres, if have not installed yet [link](https://www.postgresql.org/download/)
+
 To run the tests, run
 ```bash
 python test_app.py
-```
+``` 
 ## Authors
 Onnys Anild Lopes Menete
 
